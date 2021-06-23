@@ -1,24 +1,21 @@
-public class CalculateDaily {
+public class SwitchCase {
+    public static void main(String[] args) {
 
-        public static void main(String[] args){
-
-            int isFullTime=1;
-            int WagePerHr=20;
-            int FullDayHr=8;
-
-            double empCheck = Math.floor(Math.random()*10)%2;
-            if(empCheck == isFullTime)
-            {
-                System.out.println("Employee is Present");
-                int DailyEmpWage=WagePerHr*FullDayHr;
-                System.out.println("DailyEmpWage::"+DailyEmpWage);
-
-            }
-            else
-            {
-                System.out.println("Employee is Abscent");
-            }
-
+        int n = (int)(Math.random()*10)%3;
+        int FullDayHr=8;
+        int PartTimeHr=4;
+        int WagePerHr=20;
+        switch(n) {
+            case 1:
+                System.out.println("present FullDayHr Emp");
+                System.out.println(WagePerHr*FullDayHr);
+                break;
+            case 2:
+                System.out.println("present PartTime Emp");
+                System.out.println(WagePerHr*PartTimeHr);
+                break;
+            default:
+                System.out.println("absent");
         }
-
     }
+}
